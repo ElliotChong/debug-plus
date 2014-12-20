@@ -1,6 +1,6 @@
 {
 	"name": "debug-plus",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A drop-in replacement for the `debug` module that adds semantic sugar for `console`-style logging of various types of messages such as `log`, `warn`, `error`, or even `dir`.",
 	"main": "index.js",
 	"scripts": {
