@@ -121,8 +121,8 @@ When stdout is not a TTY, `Date#toUTCString()` is used, making it more useful fo
 
 (The MIT License)
 
-Original work Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
-Modified work Copyright (c) 2014 Elliot Chong <code@elliotjameschong.com>
+Original work Copyright (c) 2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt;  
+Modified work Copyright (c) 2014 Elliot Chong &lt;code@elliotjameschong.com&gt;
 
 	Permission is hereby granted, free of charge, to any person obtaining
 	a copy of this software and associated documentation files (the
