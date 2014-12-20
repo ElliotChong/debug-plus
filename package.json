@@ -1,6 +1,6 @@
 {
 	"name": "debug-plus",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "A drop-in replacement for the `debug` module that adds semantic sugar for `console`-style logging of various types of messages such as `log`, `warn`, `error`, or even `dir`.",
 	"main": "index.js",
 	"scripts": {
@@ -29,13 +29,19 @@
 	},
 	"homepage": "https://github.com/ElliotChong/debug-plus",
 	"dependencies": {
-		"coffee-script": "1.8.0",
 		"config": "1.9.0",
 		"debug": "2.1.0",
 		"lodash": "2.4.1"
 	},
 	"devDependencies": {
 		"chai": "1.10.0",
+		"coffee-script": "1.8.0",
+		"grunt": "0.4.5",
+		"grunt-contrib-coffee": "0.12.0",
+		"grunt-conventional-changelog": "1.1.0",
+		"grunt-notify": "0.4.1",
+		"jit-grunt": "0.9.0",
+		"load-grunt-config": "0.16.0",
 		"mocha": "2.0.1"
 	}
 }
