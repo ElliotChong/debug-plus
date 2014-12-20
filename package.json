@@ -29,6 +29,7 @@
 	},
 	"homepage": "https://github.com/ElliotChong/debug-plus",
 	"dependencies": {
+		"coffee-script": "1.8.0",
 		"config": "1.9.0",
 		"debug": "2.1.0",
 		"lodash": "2.4.1"
