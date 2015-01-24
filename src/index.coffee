@@ -19,6 +19,7 @@ config.util.setModuleDefaults "debug-plus",
 # The debug module uses process.env to dictate its default state.
 process.env.DEBUG ?= config.get "debug-plus.default"
 debug = require "debug"
+_ = require "lodash"
 
 cache = {}
 
@@ -41,7 +42,6 @@ stringify = (p_object, p_replacer, p_space=4) ->
 
 # Proxy calls to `debug` and decorate with sugar methods
 getInstance = (p_key) ->
-	_ = require "lodash"
 
 	if cache[p_key]?
 		return cache[p_key]
