@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## 1.1.1 (2015-01-23)
+
+
+#### Bug Fixes
+
+* Ensure `lodash` is accessible to all methods ([3090557c](https://github.com/ElliotChong/debug-plus/commit/3090557c50a0d25d68a537a5a88758094272e24b))
+* **get:** `instance.get()` always returning undefined ([32a6658f](https://github.com/ElliotChong/debug-plus/commit/32a6658fbc6651f1f9da055444d12962f00f91f8))
+
+
 <a name="1.1.0"></a>
 ## 1.1.0 (2014-12-20)
 
