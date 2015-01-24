@@ -78,3 +78,9 @@ describe "debug-plus", ->
 
 				instance.stringify testObject
 				assert new RegExp(message).test(logs.stdout.slice -1), "'#{message}' should be the last emitted message, instead saw '#{logs.stdout.slice -1}'"
+
+		describe "debug('test-get').get('test-get-2')", ->
+			it "returns a new debug instance", ->
+				instance = instance.get "test-get-2"
+
+				assert instance?, "instance should be defined"

@@ -42,6 +42,8 @@ stringify = (p_object, p_replacer, p_space=4) ->
 
 # Proxy calls to `debug` and decorate with sugar methods
 getInstance = (p_key) ->
+	if not p_key?
+		throw new Error "`key` is a required property for `getInstance()`"
 
 	if cache[p_key]?
 		return cache[p_key]
@@ -61,7 +63,8 @@ getInstance = (p_key) ->
 
 	Object.defineProperty cache[p_key], "get",
 		enumerable: true
-		get: getInstance
+		get: ->
+			return getInstance
 
 	Object.defineProperty cache[p_key], "log",
 		enumerable: true
