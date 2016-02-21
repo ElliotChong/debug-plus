@@ -19,7 +19,10 @@ config.util.setModuleDefaults "debug-plus",
 # The debug module uses process.env to dictate its default state.
 process.env.DEBUG ?= config.get "debug-plus.default"
 debug = require "debug"
-_ = require "lodash"
+isArray = require "lodash/isArray"
+isObject = require "lodash/isObject"
+isString = require "lodash/isString"
+once = require "lodash/once"
 
 cache = {}
 
@@ -28,7 +31,7 @@ inspect = (p_object, p_showHidden=false, p_depth=null, p_colors=true) ->
 	util = require "util"
 
 	# Support Node v0.8+ {object, options} parameters
-	if arguments.length is 2 and _.isObject p_showHidden
+	if arguments.length is 2 and isObject p_showHidden
 		return util.inspect p_object, p_showHidden
 
 	return util.inspect p_object,
@@ -74,7 +77,7 @@ getInstance = (p_key) ->
 	# Pipe output to console.warn
 	Object.defineProperty cache[p_key], "warn",
 		enumerable: true
-		get: _.once ->
+		get: once ->
 			logger = debug "#{p_key}:warn#{processString}"
 			logger.log = console.warn.bind console
 			return logger
@@ -82,7 +85,7 @@ getInstance = (p_key) ->
 	# Pipe output to console.error and optionally parse Error objects
 	Object.defineProperty cache[p_key], "error",
 		enumerable: true
-		get: _.once ->
+		get: once ->
 			logger = debug "#{p_key}:error#{processString}"
 			logger.log = console.error.bind console
 
@@ -107,9 +110,9 @@ getInstance = (p_key) ->
 				if p_break is true or config.get("debug-plus.breakOnError").toString() is true.toString()
 					debugger
 
-				if _.isString p_error
+				if isString p_error
 					logger p_error
-				else if _.isArray p_error
+				else if isArray p_error
 					strings = for error in p_error
 						errorString error
 
@@ -120,7 +123,7 @@ getInstance = (p_key) ->
 	# Enable console.dir-like functionality for `debug`
 	Object.defineProperty cache[p_key], "dir",
 		enumerable: true
-		get: _.once ->
+		get: once ->
 			logger = debug "#{p_key}:dir#{processString}"
 			logger.log = console.log.bind console
 
@@ -135,7 +138,7 @@ getInstance = (p_key) ->
 	# Log a JSON.stingifiy string with pretty-print enabled
 	Object.defineProperty cache[p_key], "stringify",
 		enumerable: true
-		get: _.once ->
+		get: once ->
 			logger = debug "#{p_key}:stringify#{processString}"
 			logger.log = console.log.bind console
 
@@ -145,7 +148,7 @@ getInstance = (p_key) ->
 	# Timestamp execution and optionally provide a message
 	Object.defineProperty cache[p_key], "timestamp",
 		enumerable: true
-		get: _.once ->
+		get: once ->
 			logger = debug "#{p_key}:benchmark#{processString}"
 			logger.log = console.log.bind console
 
