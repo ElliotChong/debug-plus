@@ -1,3 +1,20 @@
+<a name"1.2.1"></a>
+## 1.2.1 (2016-02-21)
+
+
+Updating the `CHANGELOG`.
+
+
+<a name"1.2.0"></a>
+## 1.2.0 (2016-02-21)
+
+
+#### Features
+
+* Updating to debug 2.2.0 ([76e0c85e](https://github.com/ElliotChong/debug-plus/commit/76e0c85e))
+* Updating to Lodash 4.5.0 ([10b67f8a](https://github.com/ElliotChong/debug-plus/commit/10b67f8a))
+
+
 <a name="1.1.1"></a>
 ## 1.1.1 (2015-01-23)
 
