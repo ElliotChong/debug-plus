@@ -3,6 +3,7 @@
 *.log
 
 # Project-Specific
+lib
 .sass-cache
 /node_modules
 config/local.*
