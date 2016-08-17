@@ -1,47 +1,47 @@
 {
-	"name": "debug-plus",
-	"version": "1.2.1",
-	"description": "A drop-in replacement for the `debug` module that adds semantic sugar for `console`-style logging of various types of messages such as `log`, `warn`, `error`, or even `dir`.",
-	"main": "index.js",
-	"scripts": {
-		"test": "DEBUG=test* mocha --recursive --compilers coffee:coffee-script/register",
-		"test-watch": "DEBUG=test* mocha --watch --recursive --compilers coffee:coffee-script/register"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ElliotChong/debug-plus.git"
-	},
-	"keywords": [
-		"debug",
-		"debugging",
-		"debugger",
-		"logging",
-		"console"
-	],
-	"author": "Elliot Chong <code@elliotjameschong.com>",
-	"contributors": [
-		"TJ Holowaychuk <tj@vision-media.ca>",
-		"Nathan Rajlich <nathan@tootallnate.net> (http://n8.io)"
-	],
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/ElliotChong/debug-plus/issues"
-	},
-	"homepage": "https://github.com/ElliotChong/debug-plus",
-	"dependencies": {
-		"config": "^1.9.0",
-		"debug": "^2.2.0",
-		"lodash": "^4.5.0"
-	},
-	"devDependencies": {
-		"chai": "^1.10.0",
-		"coffee-script": "^1.8.0",
-		"grunt": "^0.4.5",
-		"grunt-contrib-coffee": "^0.12.0",
-		"grunt-conventional-changelog": "^1.1.0",
-		"grunt-notify": "^0.4.1",
-		"jit-grunt": "^0.9.0",
-		"load-grunt-config": "^0.16.0",
-		"mocha": "^2.0.1"
-	}
+  "name": "debug-plus",
+  "version": "1.2.1",
+  "description": "A drop-in replacement for the `debug` module that adds semantic sugar for `console`-style logging of various types of messages such as `log`, `warn`, `error`, or even `dir`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "DEBUG=test* mocha --recursive --compilers coffee:coffee-script/register",
+    "test-watch": "DEBUG=test* mocha --watch --recursive --compilers coffee:coffee-script/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElliotChong/debug-plus.git"
+  },
+  "keywords": [
+    "debug",
+    "debugging",
+    "debugger",
+    "logging",
+    "console"
+  ],
+  "author": "Elliot Chong <code@elliotjameschong.com>",
+  "contributors": [
+    "TJ Holowaychuk <tj@vision-media.ca>",
+    "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ElliotChong/debug-plus/issues"
+  },
+  "homepage": "https://github.com/ElliotChong/debug-plus",
+  "dependencies": {
+    "config": "^1.21.0",
+    "debug": "^2.2.0",
+    "lodash": "^4.15.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coffee-script": "^1.8.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-coffee": "^0.12.0",
+    "grunt-conventional-changelog": "^1.1.0",
+    "grunt-notify": "^0.4.1",
+    "jit-grunt": "^0.9.0",
+    "load-grunt-config": "^0.16.0",
+    "mocha": "^3.0.2"
+  }
 }
